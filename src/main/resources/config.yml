@@ -49,8 +49,8 @@ settings:
     rejoin-cooldown: 60
     rejoin-cooldown-enabled: false
     accept-other-alphabets-letters-on-tag: false
-    min-to-verify: 1
     ranking-type: "DENSE"
+    lore-length: 36
 kdr-grinding-prevention:
     enable-max-kills: false
     max-kills-per-victim: 10
@@ -122,6 +122,7 @@ clan:
     min-length: 2
     max-alliances: -1
     min-size-to-set-ally: 3
+    min-to-verify: 1
 tasks:
     collect-upkeep:
         hour: 1
@@ -179,7 +180,7 @@ mysql:
     password: ''
     database: ''
 permissions:
-  auto-group-groupname: true
+  auto-group-groupname: false
   YourClanNameHere:
   - test.permission
 performance:
