@@ -38,10 +38,10 @@ public class PlayerHeadCacheTask extends BukkitRunnable {
         players.sort(Comparator.comparing(ClanPlayer::getName));
 
         for (ClanPlayer player : players) {
-            ItemStack itemStack = new ItemStack(Material.PLAYER_HEAD);
+            ItemStack itemStack = new ItemStack(Material.SKULL_ITEM);
             SkullMeta itemMeta = (SkullMeta) itemStack.getItemMeta();
             if (itemMeta != null) {
-                itemMeta.setOwningPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()));
+                itemMeta.setOwner(Bukkit.getOfflinePlayer(player.getUniqueId()).getName());
             }
             itemStack.setItemMeta(itemMeta);
 
